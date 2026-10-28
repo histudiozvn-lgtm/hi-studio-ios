@@ -1,0 +1,52 @@
+name: HiStudio
+options:
+  bundleIdPrefix: vn.studioz
+  deploymentTarget:
+    iOS: "15.0"
+  createIntermediateGroups: true
+settings:
+  base:
+    SWIFT_VERSION: "5.0"
+    MARKETING_VERSION: "1.0.0"
+    CURRENT_PROJECT_VERSION: "1"
+targets:
+  HiStudio:
+    type: application
+    platform: iOS
+    sources:
+      - HiStudio
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: vn.studioz.histudio
+        PRODUCT_NAME: HiStudio
+        TARGETED_DEVICE_FAMILY: "1,2"
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        GENERATE_INFOPLIST_FILE: NO
+    info:
+      path: HiStudio/Info.plist
+      properties:
+        CFBundleDisplayName: "Hi. Studio"
+        CFBundleShortVersionString: "$(MARKETING_VERSION)"
+        CFBundleVersion: "$(CURRENT_PROJECT_VERSION)"
+        ITSAppUsesNonExemptEncryption: false
+        LSRequiresIPhoneOS: true
+        UILaunchScreen:
+          UIColorName: LaunchBG
+        UIRequiresFullScreen: false
+        UISupportedInterfaceOrientations:
+          - UIInterfaceOrientationPortrait
+          - UIInterfaceOrientationLandscapeLeft
+          - UIInterfaceOrientationLandscapeRight
+        UISupportedInterfaceOrientations~ipad:
+          - UIInterfaceOrientationPortrait
+          - UIInterfaceOrientationPortraitUpsideDown
+          - UIInterfaceOrientationLandscapeLeft
+          - UIInterfaceOrientationLandscapeRight
+        CFBundleURLTypes:
+          - CFBundleURLName: vn.studioz.histudio
+            CFBundleURLSchemes:
+              - histudio
+        NSCameraUsageDescription: "Hi. Studio cần dùng camera để chụp và tải ảnh lên."
+        NSPhotoLibraryUsageDescription: "Hi. Studio cần truy cập thư viện ảnh để bạn chọn ảnh tải lên."
+        NSPhotoLibraryAddUsageDescription: "Hi. Studio cần quyền lưu ảnh và tệp bạn tải xuống vào thư viện."
+        NSMicrophoneUsageDescription: "Hi. Studio cần micro khi bạn quay video."
